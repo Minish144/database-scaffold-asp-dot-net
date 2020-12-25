@@ -18,7 +18,6 @@ namespace database_scaffold_asp_dot_net.Controllers
         {
             this._db = new Postgresql();
         }
-
         Postgresql _db;
 
         // GET api/employees
