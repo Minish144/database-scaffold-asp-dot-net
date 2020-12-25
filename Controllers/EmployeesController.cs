@@ -38,7 +38,7 @@ namespace database_scaffold_asp_dot_net.Controllers
         public async Task<ActionResult<Employee>> Get(int? id)
         {
             if (id == null)
-                return BadRequest();
+                return NotFound();
             var employees = await this._db.Employees.FromSqlRaw(
                 $"SELECT * FROM public.\"Employees\" WHERE \"Id\" = {id}")
                 .ToListAsync();
@@ -59,6 +59,17 @@ namespace database_scaffold_asp_dot_net.Controllers
             var positionId = employee.PositionId;
             await this._db.Employees.AddAsync(employee);
             await this._db.SaveChangesAsync();
+            return Ok();
+        }
+
+        // Delete api/employees/1/delete
+        [HttpDelete("{id}/delete")]
+        public async Task<ActionResult> Delete(int? id)
+        {
+            if (id == null)
+                return NotFound();
+            this._db.Employees.FromSqlRaw("DELETE FROM public.\"Employees\" WHERE \"Id\" = {id}");
+            this._db.SaveChanges();
             return Ok();
         }
     }
