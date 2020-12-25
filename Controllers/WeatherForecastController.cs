@@ -9,7 +9,7 @@ namespace database_scaffold_asp_dot_net.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class WeatherForecastController : ControllerBase
+    public class WeatherForecastController : Controller
     {
         private static readonly string[] Summaries = new[]
         {

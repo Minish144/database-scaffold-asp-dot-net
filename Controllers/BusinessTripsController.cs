@@ -7,7 +7,7 @@ using Microsoft.Extensions.Logging;
 
 namespace database_scaffold_asp_dot_net.Controllers
 {
-    public class BusinessTripController
+    public class BusinessTripController : Controller
     {
 
     }

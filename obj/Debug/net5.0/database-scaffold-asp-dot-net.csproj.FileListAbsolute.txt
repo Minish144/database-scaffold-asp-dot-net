@@ -34,3 +34,9 @@
 /Users/minish144/database-scaffold-asp-dot-net/obj/Debug/net5.0/ref/database-scaffold-asp-dot-net.dll
 /Users/minish144/database-scaffold-asp-dot-net/obj/Debug/net5.0/database-scaffold-asp-dot-net.pdb
 /Users/minish144/database-scaffold-asp-dot-net/obj/Debug/net5.0/database-scaffold-asp-dot-net.genruntimeconfig.cache
+/Users/minish144/database-scaffold-asp-dot-net/bin/Debug/net5.0/Microsoft.EntityFrameworkCore.dll
+/Users/minish144/database-scaffold-asp-dot-net/bin/Debug/net5.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/Users/minish144/database-scaffold-asp-dot-net/bin/Debug/net5.0/Microsoft.EntityFrameworkCore.Relational.dll
+/Users/minish144/database-scaffold-asp-dot-net/bin/Debug/net5.0/Microsoft.Extensions.DependencyInjection.dll
+/Users/minish144/database-scaffold-asp-dot-net/bin/Debug/net5.0/Npgsql.dll
+/Users/minish144/database-scaffold-asp-dot-net/bin/Debug/net5.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll

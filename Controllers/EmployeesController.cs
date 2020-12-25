@@ -3,30 +3,59 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using database_scaffold_asp_dot_net.Models;
+using database_scaffold_asp_dot_net.Database;
 
 namespace database_scaffold_asp_dot_net.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class EmployeesController
+    public class EmployeesController : Controller
     {
+        public EmployeesController()
+        {
+            this._db = new Postgresql();
+        }
+
+        Postgresql _db;
 
         // GET api/employees
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get(
+        public async Task<ActionResult<List<Employee>>> Get(
             [FromQuery] int? count = 10,
             [FromQuery] int? offset = 0)
         {
-            return new string[] { "employee1", "employee2" };
+            var employees = await this._db.Employees.FromSqlRaw(
+                $"SELECT * FROM public.\"Employees\" LIMIT {count} OFFSET {offset}")
+                .ToListAsync();
+            return employees;
         }
 
         // GET api/employees/5
         [HttpGet("{id}")]
-        public ActionResult<string> Get()
+        public async Task<ActionResult<Employee>> Get(int? id)
         {
-            return "value";
+            if (id == null)
+                return BadRequest();
+            var employees = await this._db.Employees.FromSqlRaw(
+                $"SELECT * FROM public.\"Employees\" WHERE \"Id\" = {id}")
+                .ToListAsync();
+            if (employees.Count() == 0)
+                return NotFound();
+            return employees[0];
+        }
+
+        // GET api/employees/create
+        [HttpPost]
+        public async Task<ActionResult> Create([FromBody] Employee employee)
+        {
+            if (employee == null)
+                return BadRequest();
+            this._db.Employees.Add(employee);
+            await this._db.SaveChangesAsync();
+            return Ok();
         }
     }
 }
