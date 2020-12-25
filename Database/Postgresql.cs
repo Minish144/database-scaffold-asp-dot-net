@@ -8,7 +8,7 @@ namespace database_scaffold_asp_dot_net.Database
     {
         public DbSet<BusinessTrip> BusinessTrips { get; set; }
         public DbSet<Employee> Employees { get; set; }
-        public DbSet<PersonalData> PersonalDatas { get; set; }
+        public DbSet<PersonalData> PersonalData { get; set; }
         public DbSet<Position> Positions { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

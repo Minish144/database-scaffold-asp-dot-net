@@ -7,6 +7,8 @@ using Microsoft.Extensions.Logging;
 
 namespace database_scaffold_asp_dot_net.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class PositionsController : Controller
     {
 

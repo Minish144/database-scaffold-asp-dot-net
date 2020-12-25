@@ -10,9 +10,11 @@ using database_scaffold_asp_dot_net.Database;
 
 namespace database_scaffold_asp_dot_net.Controllers
 {
-    public class BusinessTripController : Controller
+    [Route("api/[controller]")]
+    [ApiController]
+    public class BusinessTripsController : Controller
     {
-        public BusinessTripController()
+        public BusinessTripsController()
         {
             this._db = new Postgresql();
         }
@@ -59,6 +61,7 @@ namespace database_scaffold_asp_dot_net.Controllers
         [HttpDelete("{id}/delete")]
         public async Task<ActionResult> Delete(int? id)
         {
+            Console.WriteLine(id);
             if (id == null)
                 return NotFound();
             BusinessTrip businessTrip = this._db.BusinessTrips
