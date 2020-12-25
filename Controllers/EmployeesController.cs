@@ -47,14 +47,19 @@ namespace database_scaffold_asp_dot_net.Controllers
             return employees[0];
         }
 
-        // GET api/employees/create
-        [HttpPost]
-        public async Task<ActionResult> Create([FromBody] Employee employee)
+        // POST api/employees/new
+        [HttpPost("new")]
+        public async Task<ActionResult> New([FromBody] Employee employee)
         {
-            if (employee == null)
+            if (!ModelState.IsValid)
                 return BadRequest();
-            this._db.Employees.Add(employee);
+            var id = employee.Id;
+            var firstName = employee.FirstName;
+            var lastName = employee.LastName;
+            var positionId = employee.PositionId;
+            await this._db.Employees.AddAsync(employee);
             await this._db.SaveChangesAsync();
+            // await this._db.Employees.FromSqlRaw($"INSERT INTO public.\"Employees\" VALUES ('{id}', '{firstName}', '{lastName}', '{positionId}')").as;
             return Ok();
         }
     }
