@@ -59,7 +59,6 @@ namespace database_scaffold_asp_dot_net.Controllers
             var positionId = employee.PositionId;
             await this._db.Employees.AddAsync(employee);
             await this._db.SaveChangesAsync();
-            // await this._db.Employees.FromSqlRaw($"INSERT INTO public.\"Employees\" VALUES ('{id}', '{firstName}', '{lastName}', '{positionId}')").as;
             return Ok();
         }
     }
