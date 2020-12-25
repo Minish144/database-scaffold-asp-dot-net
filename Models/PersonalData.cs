@@ -7,6 +7,6 @@ namespace database_scaffold_asp_dot_net.Models
         public int Id { get; set; }
         public DateTime Birthday { get; set; }
         public string Address { get; set; }
-        public int Phone { get; set; }
+        public long Phone { get; set; }
     }
 }
