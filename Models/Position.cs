@@ -1,3 +1,4 @@
+
 namespace database_scaffold_asp_dot_net.Models
 {
     public class Position
