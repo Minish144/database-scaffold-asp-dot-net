@@ -68,8 +68,12 @@ namespace database_scaffold_asp_dot_net.Controllers
         {
             if (id == null)
                 return NotFound();
-            this._db.Employees.FromSqlRaw("DELETE FROM public.\"Employees\" WHERE \"Id\" = {id}");
-            this._db.SaveChanges();
+            Employee employee = this._db.Employees
+                .Where(o => o.Id == id)
+                .FirstOrDefault();
+
+            this._db.Employees.Remove(employee);
+            await this._db.SaveChangesAsync();
             return Ok();
         }
     }
