@@ -72,5 +72,4 @@ namespace database_scaffold_asp_dot_net.Controllers
             return Ok();
         }
     }
-    }
 }
