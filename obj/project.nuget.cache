@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "dgSpecHash": "nae4zK6TEZW92Zy2HPf8qX5stg1QRFVTMZO+AedwoTVEgKcqvKQmH9QsAWw3zNfFDwYbBT8tuQm4t9UI/17VGQ==",
+  "success": true,
+  "projectFilePath": "/Users/minish144/database-scaffold-asp-dot-net/database-scaffold-asp-dot-net.csproj",
+  "expectedPackageFiles": [
+    "/Users/minish144/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/5.0.1/microsoft.aspnetcore.authentication.jwtbearer.5.0.1.nupkg.sha512",
+    "/Users/minish144/.nuget/packages/microsoft.aspnetcore.authentication.openidconnect/5.0.1/microsoft.aspnetcore.authentication.openidconnect.5.0.1.nupkg.sha512",
+    "/Users/minish144/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",
+    "/Users/minish144/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "/Users/minish144/.nuget/packages/microsoft.identitymodel.jsonwebtokens/6.7.1/microsoft.identitymodel.jsonwebtokens.6.7.1.nupkg.sha512",
+    "/Users/minish144/.nuget/packages/microsoft.identitymodel.logging/6.7.1/microsoft.identitymodel.logging.6.7.1.nupkg.sha512",
+    "/Users/minish144/.nuget/packages/microsoft.identitymodel.protocols/6.7.1/microsoft.identitymodel.protocols.6.7.1.nupkg.sha512",
+    "/Users/minish144/.nuget/packages/microsoft.identitymodel.protocols.openidconnect/6.7.1/microsoft.identitymodel.protocols.openidconnect.6.7.1.nupkg.sha512",
+    "/Users/minish144/.nuget/packages/microsoft.identitymodel.tokens/6.7.1/microsoft.identitymodel.tokens.6.7.1.nupkg.sha512",
+    "/Users/minish144/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/Users/minish144/.nuget/packages/swashbuckle.aspnetcore/5.6.3/swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "/Users/minish144/.nuget/packages/swashbuckle.aspnetcore.swagger/5.6.3/swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "/Users/minish144/.nuget/packages/swashbuckle.aspnetcore.swaggergen/5.6.3/swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "/Users/minish144/.nuget/packages/swashbuckle.aspnetcore.swaggerui/5.6.3/swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512",
+    "/Users/minish144/.nuget/packages/system.identitymodel.tokens.jwt/6.7.1/system.identitymodel.tokens.jwt.6.7.1.nupkg.sha512",
+    "/Users/minish144/.nuget/packages/system.security.cryptography.cng/4.5.0/system.security.cryptography.cng.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
