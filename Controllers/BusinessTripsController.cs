@@ -50,8 +50,16 @@ namespace database_scaffold_asp_dot_net.Controllers
         [HttpPost("new")]
         public async Task<ActionResult> New([FromBody] BusinessTrip businessTrip)
         {
+            int id;
+            Console.WriteLine(businessTrip.ToString());
             if (!ModelState.IsValid)
                 return BadRequest();
+            var max = this._db.BusinessTrips.OrderByDescending(u => u.Id).FirstOrDefault();
+            if (max?.Id == null)
+                id = 0;
+            else
+                id = max.Id;
+            businessTrip.Id = id + 1;
             await this._db.BusinessTrips.AddAsync(businessTrip);
             await this._db.SaveChangesAsync();
             return Ok();

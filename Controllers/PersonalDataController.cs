@@ -50,8 +50,15 @@ namespace database_scaffold_asp_dot_net.Controllers
         [HttpPost("new")]
         public async Task<ActionResult> New([FromBody] PersonalData personalData)
         {
+            int id;
             if (!ModelState.IsValid)
                 return BadRequest();
+            var max = this._db.PersonalData.OrderByDescending(u => u.Id).FirstOrDefault();
+            if (max?.Id == null)
+                id = 0;
+            else
+                id = max.Id;
+            personalData.Id = id + 1;
             await this._db.PersonalData.AddAsync(personalData);
             await this._db.SaveChangesAsync();
             return Ok();
